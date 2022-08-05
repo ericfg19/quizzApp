@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A528E"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/QuestionNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/question_number"
+        android:textAlignment="center"
+        android:textColor="#ffa384"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/selctedoption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/selctedoption"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:visibility="gone">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/CorrectAnswer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/correctanswer"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:visibility="gone">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/QuestionNumber">
+
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/question_1"
+            android:textColor="@color/txtpadrao"
+            android:textSize="25sp">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/FirstTwoOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+
+        <TextView
+            android:id="@+id/optionA"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/optiondesign"
+            android:paddingTop="14dp"
+            android:text="@string/question1_A"
+            android:textAlignment="center"
+            android:textColor="#272343">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/optionB"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/optiondesign"
+            android:paddingTop="14dp"
+            android:text="@string/question1_B"
+            android:textAlignment="center"
+            android:textColor="#272343">
+
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/RemainingTwoOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FirstTwoOption">
+
+
+        <TextView
+            android:id="@+id/optionC"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/optiondesign"
+            android:paddingTop="14dp"
+            android:text="@string/question1_C"
+            android:textAlignment="center"
+            android:textColor="#272343">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/optionD"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/optiondesign"
+            android:paddingTop="14dp"
+            android:text="@string/question1_D"
+            android:textAlignment="center"
+            android:textColor="#272343">
+
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="414dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RemainingTwoOption">
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:padding="10dp"
+            android:text="@string/score"
+            android:textColor="@color/txtpadrao"
+            android:textStyle="bold" />
+
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:backgroundTint="#ffa384"
+            android:indeterminate="false">
+
+        </ProgressBar>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnInfo"
+        android:layout_width="111dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:text="INFORMAÇÕES"
+        android:textColor="@color/txtpadrao"
+        android:textColorHighlight="@color/btnpadrao"
+        android:textSize="10sp"
+        app:iconTint="@color/btnpadrao"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:rippleColor="@color/btnpadrao"
+        app:strokeColor="#812929" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
